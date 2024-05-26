@@ -222,10 +222,10 @@ print(card_deck[1:12])
 # What would you use so the printout includes the following:
 # Hint: It's every third card of the full deck.
 # ['1', '4', '7', '10', 'K']
-print(card_deck[0:13:3])
+print(card_deck[0:len(card_deck):3])
 
 # Print out the EVEN numbers. No faces.
-print(number % 2 = = 0)
+print(numbers[1::2])
 
 # ---------------------------------------------------------------------
 # Exercise 3. The Steps Tracker 👟
@@ -243,32 +243,35 @@ print(number % 2 = = 0)
 # - How many steps total did you take over the whole week?
 # - What was the least number of steps you took on a day?
 # - What was the most number of steps you took on a day? 
+steps = []
 
-# monday = input('Steps for Monday: ')
-# tuesday = input('Steps for Tuesday: ')
-# wednesday = input('Steps for Wednesday: ')
-# thursday = input('Steps for Thursday: ')
-# friday = input('Steps for Friday: ')
-# saturday = input('Steps for Saturday: ')
-# sunday = input('Steps for Sunday: ')
 
-# steps = [???]
+monday = int(input('Steps for Monday: '))
+tuesday = int(input('Steps for Tuesday: '))
+wednesday = int(input('Steps for Wednesday: '))
+thursday = int(input('Steps for Thursday: '))
+friday = int(input('Steps for Friday: '))
+saturday = int(input('Steps for Saturday: '))
+sunday = int(input('Steps for Sunday: '))
+
+# Append the steps for each day to the list
+steps.extend([monday, tuesday, wednesday, thursday, friday, saturday, sunday])
 
 # Steps on Wednesday
-# print(steps[???])
+print("Steps on Wednesday:", steps[2])
 
-# Steps on the work days
-# work_days_steps = steps[???]
-# print(???(work_days_steps))
+# Steps on the work days (Mon - Fri)
+work_days_steps = steps[0:5]
+print("Steps on work days (Mon - Fri):", sum(work_days_steps))
 
-# Steps over the whole week
-# print(???(steps))
+# Total steps over the whole week
+print("Total steps over the whole week:", sum(steps))
 
 # Least number of steps
-# print(???(steps))
+print("Least number of steps:", min(steps))
 
 # Highest number of steps
-# print(???(steps))
+print("Highest number of steps:", max(steps))
 
 # ---------------------------------------------------------------------
 # Exercise 4. Bonus Round: The Speech Reverser and Counter 🎤
@@ -292,14 +295,15 @@ print(number % 2 = = 0)
 # - Prints out the word count. 
 
 # Get input from the user
-# user_input = ???('Give me a phrase')
+user_input =input('put a phrase')
 
 # Split user input into words
-# words = user_input.???()
+words = user_input.split()
+print(words)
 
 # Reverse the list and print it
-# reversed_words = ???(???(words))
-# print(reversed_words)
+reversed_words = list(reversed(words))
+print(reversed_words)
 
 # Print the length of the words list
-# print(???(words))
+print(len(words))

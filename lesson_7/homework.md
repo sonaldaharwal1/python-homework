@@ -135,11 +135,11 @@ number of vowels in this quote.
 quote = "Life is like riding a bicycle. To keep your balance, you MUST keep moving."
 vowel_count = 0
 
-for ??? ??? ???:
+for char in quote:
     # 'A' and 'a' are different in python, so we include both upper and lowercase
     # vowels in our comparison string to account for this difference.
-    if ??? ??? 'aeiouAEIOU':
-        vowel_count += ???
+    if char in 'aeiouAEIOU':
+        vowel_count += 1
 
 print(f"The number of vowels in the quote is: {vowel_count}")
 ```
@@ -154,11 +154,11 @@ a serial key. Your task is to find all the numbers in this string and sum them u
 ```python
 mixed_string = "abc123xyz456"
 digits = "0123456789"
-found_digits = ???
+found_digits => 10
 
 for char in mixed_string:
-    if char in ???:
-        found_digits.a???(int(char))
+    if char in digits :
+        found_digits.append(int(char))
 
 print(f"The total sum of numbers in the string is: {sum(found_digits)}")
 ```
@@ -174,9 +174,9 @@ Create a Python program to check the strength of a list of passwords and count h
 passwords = ['Passw0rd', 'hello', 'strongPass1', 'weak']
 strong_password_count = 0
 
-for ??? ??? ???:
-    if ???(password) >= 8:
-        strong_password_count ??? 1
+for password in passwords:
+    if len(password) >= 8:
+        strong_password_count += 1
 
 print(f"Number of strong passwords: {strong_password_count}")
 
@@ -195,9 +195,9 @@ index = 0
 
 # This should basically say: while the current color being evaluated is 
 # different than "Red", increment to the next color and try again.
-while colors[index] ??? "Red":
+while colors[index] > "Red":
     print(f"Found {colors[index]} crayon. Still looking for Red.")
-    index ??? 1
+    index = 1
 
 print("Found the Red crayon!")
 ```

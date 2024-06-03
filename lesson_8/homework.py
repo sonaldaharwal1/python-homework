@@ -2,6 +2,7 @@
 
 # READ CAREFULLY THE EXERCISE DESCRIPTION AND SOLVE IT RIGHT AFTER IT
 
+
 # Challenge 1
 # Two Lowest Elements
 #
@@ -12,9 +13,22 @@
 # Example: [198, 3, 4, 9, 10, 9, 2], Return: 2, 3
 #
 # Hint: Start with sorting the list
+numbers = [5, 2, 9, 1, 5, 6]
+my_sorted_list = sorted(numbers)
+print(my_sorted_list)
 
-arr = [5, 2, 9, 1, 5, 6]
-# Your code here
+lowest_1 = my_sorted_list[0]
+lowest_2 = my_sorted_list[1]
+
+for num in my_sorted_list[2:]:
+    if num < lowest_1:
+        lowest_2 = lowest_1
+        lowest_1 = num
+    elif lowest_1 < num < lowest_2:
+        lowest_2 = num
+
+print("Two lowest elements:", lowest_1, lowest_2)
+
 
 # ---------------------------------------------------------------------
 
@@ -29,11 +43,19 @@ arr = [5, 2, 9, 1, 5, 6]
 # Hint: Loop through each character and check if a character is NOT a space.
 # If it’s not, add the character to the new file name. This way, you will
 # exclude all spaces.
-
+#
 file_name = "My Summer Photos 2023"
-# Your code here
 
-# ---------------------------------------------------------------------
+new_file_name = ""
+
+# Loop through each character in the file name
+for char in file_name:
+    if char != " ":
+        # If it's not a space, add it to the new file name
+        new_file_name += char
+
+print("File name without spaces:", new_file_name)
+# # ---------------------------------------------------------------------
 
 # Challenge 3
 # Sum of digits
@@ -45,7 +67,7 @@ file_name = "My Summer Photos 2023"
 # Example: number = 5. Result = 1 + 2 + 3 + 4 + 5 = 15
 
 # Initialize 'number' variable to 5. This is the number up to which we will calculate the sum.
-n = 5
+# n = 5
 
 # Initialize 'result' variable to 0. This variable will hold the sum.
 
@@ -54,9 +76,26 @@ n = 5
 # Add the current value of 'i' to 'result'
 
 # Print the sum of integers from 1 to 'number'
+number = 5
 
+        # Initialize 'total_sum' variable to 0. This variable will hold the sum of sums.
+total_sum = 0
 
-# ---------------------------------------------------------------------
+        # Iterate through the range starting from 1 up to 'number + 1'
+for i in range(1, number + 1):
+            # Initialize 'sum_of_digits' variable to 0 for each number
+    sum_of_digits = 0
+
+            # Convert the current number to a string to iterate over its digits
+    for digit in str(i):
+                # Add each digit to the 'sum_of_digits'
+        sum_of_digits += int(digit)
+
+            # Add the sum of digits for the current number to the 'total_sum'
+        total_sum += sum_of_digits
+
+        # Print the sum of integers from 1 to 'number'
+print("Result:", total_sum)
 
 # Challenge 4
 # Isogram
@@ -75,7 +114,14 @@ n = 5
 # Use a for loop to iterate over every letter and conditional statements to check the condition
 # Use the count() method (think how it can help you solve this problem!)
 
+word = input('Enter your word: ')
+isogram = True
 
+for char in word:
+    if word.count(char) > 1:
+        isogram = False
+        break
+print(isogram)
 # ---------------------------------------------------------------------
 
 # Challenge 5
@@ -107,3 +153,8 @@ string = "312"
 # and add the repeated character to 'result'
 
 # Print the final result
+result=""
+for char in string:
+    current_num = int(char)
+    result += char * current_num
+print(result)

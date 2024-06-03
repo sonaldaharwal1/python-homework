@@ -33,7 +33,7 @@ if number % 3 == 0 and number % 7 == 0:
     print('Bingo')
 elif number % 3 == 0:
     print('Bin')
-elif number % 5 == 0:
+elif number % 7 == 0:
     print('Go')
 else:
     print(number)

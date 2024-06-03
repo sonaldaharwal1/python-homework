@@ -121,12 +121,72 @@
 
 
 
-colors = ["Blue", "Yellow", "Green", "Red", "Purple", "Orange"]
-index = 0
+# colors = ["Blue", "Yellow", "Green", "Red", "Purple", "Orange"]
+# index = 0
+#
+# # This should basically say: while the current color being evaluated is
+# # different than "Red", increment to the next color and try again.
+# while colors[index] != "Red":
+#     print(f"Found {colors[index]} crayon. Still looking for Red.")
+#     index += 1
+# # print("Found the Red crayon!")
+# numbers = [5, 2, 9, 1, 5, 6]
+# # Your code here
+# my_sorted_list = sorted(numbers)
+# print(my_sorted_list)
+# lowest_1 = [0]
+# lowest_2 = [1]
+#
+# # Iterate through the list of numbers
+# for num in numbers[2:]:
+#         if num < lowest_1:
+#             lowest_2 = lowest_1
+#             lowest_1 = num
+#         elif lowest_1 < num < lowest_2:
+#             lowest_2 = num
+#         elif num == lowest_1:
+#             lowest_2 = lowest_1
 
-# This should basically say: while the current color being evaluated is
-# different than "Red", increment to the next color and try again.
-while colors[index] != "Red":
-    print(f"Found {colors[index]} crayon. Still looking for Red.")
-    index += 1
-print("Found the Red crayon!")
+# file_name = "My Summer Photos 2023"
+# new_file_name = ""
+#
+# # Loop through each character in the file name
+# for char in file_name:
+#     # Check if the character is not a space
+#     if char != " ":
+#         # If it's not a space, add it to the new file name
+#         new_file_name += char
+#
+# # Print the new file name without spaces
+# # print("File name without spaces:", new_file_name)
+# numbers = [5, 2, 9, 1, 5, 6]
+# # # Your code here
+# my_sorted_list = sorted(numbers)
+# print(my_sorted_list)
+# lowest_1= [0]
+# lowest_2 =[1]
+# for num in numbers[2:]:
+#     if num < lowest_1:
+#       lowest_2 = lowest_1
+#       lowest_1 = num
+#   elif lowest_1 < num < lowest_2:
+#             lowest_2 = num
+#         elif num == lowest_1:
+#             lowest_2 = lowest_1
+
+
+numbers = [5, 2, 9, 1, 5, 6]
+my_sorted_list = sorted(numbers)
+print(my_sorted_list)
+
+lowest_1 = my_sorted_list[0]  # Initialize lowest_1 with the first element
+lowest_2 = my_sorted_list[1]  # Initialize lowest_2 with the second element
+
+for num in my_sorted_list[2:]:
+    if num < lowest_1:
+        lowest_2 = lowest_1
+        lowest_1 = num
+    elif lowest_1 < num < lowest_2:
+        lowest_2 = num
+
+print("Two lowest elements:", lowest_1, lowest_2)

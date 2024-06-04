@@ -22,6 +22,11 @@ instead of the name, so it behaves like this:
 greeting() # Prints: Hello, stranger!
 greeting('Tom') # Prints: Hello, Tom!
 ```
+def say_greeting(name='stranger',greeting= 'Hello'):
+print(f'{greeting},{name})
+
+say_greeting(name='Tom')
+
 
 ### Multiple Parameters
 

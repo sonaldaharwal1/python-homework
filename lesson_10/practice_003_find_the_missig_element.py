@@ -19,3 +19,7 @@
 
 # Pre-code
 def find_missing_number(arr1, arr2):
+
+   for num in missing_number:
+     if len(arr1) != len(arr2):
+   elif sorted(str2) == sorted(str2):

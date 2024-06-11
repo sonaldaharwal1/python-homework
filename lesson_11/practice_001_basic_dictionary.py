@@ -8,3 +8,8 @@ an imaginary person:
   nested dictionary.
 - Whether they’re married or not.
 """
+bio  {
+    "name": "sonal",
+    "age" :36,
+  "location": "portland",
+
